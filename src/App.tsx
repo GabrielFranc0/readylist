@@ -1052,7 +1052,7 @@ export default function App() {
                         </div>
 
                         {/* Second row: Quantity controls, price and actions */}
-                        <div className="flex items-center justify-between mt-3">
+                        <div className="flex items-center justify-between mt-3 gap-4">
                           <div className="flex items-center gap-1">
                             <button
                               onClick={() => updateQuantity(product.id, -1)}
@@ -1072,7 +1072,7 @@ export default function App() {
                             </button>
                           </div>
 
-                          <div className="text-right">
+                          <div className="text-right flex-shrink-0 min-w-[80px]">
                             {product.price !== null ? (
                               <p className="font-bold text-market-700 text-sm">
                                 {formatCurrency(product.price * product.quantity)}
