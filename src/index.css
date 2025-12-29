@@ -14,9 +14,9 @@ html {
 
 body {
   font-family: 'Outfit', system-ui, sans-serif;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   min-height: 100vh;
-  color: #166534;
+  color: #000000;
 }
 
 /* Custom scrollbar */
@@ -25,17 +25,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(22, 163, 74, 0.1);
+  background: rgba(100, 116, 139, 0.1);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(22, 163, 74, 0.3);
+  background: rgba(100, 116, 139, 0.3);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(22, 163, 74, 0.5);
+  background: rgba(100, 116, 139, 0.5);
 }
 
 /* Glass effect utility */
@@ -47,16 +47,16 @@ body {
 }
 
 .glass-dark {
-  background: rgba(22, 163, 74, 0.1);
+  background: rgba(100, 116, 139, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(100, 116, 139, 0.2);
 }
 
 /* Input focus styles */
 input:focus, button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.3);
 }
 
 /* Checkbox custom style */
@@ -64,7 +64,7 @@ input:focus, button:focus {
   appearance: none;
   width: 22px;
   height: 22px;
-  border: 2px solid #22c55e;
+  border: 2px solid #64748b;
   border-radius: 6px;
   cursor: pointer;
   position: relative;
@@ -72,8 +72,8 @@ input:focus, button:focus {
 }
 
 .custom-checkbox:checked {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-  border-color: #16a34a;
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  border-color: #475569;
 }
 
 .custom-checkbox:checked::after {
