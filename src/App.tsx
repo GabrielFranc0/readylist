@@ -1021,6 +1021,7 @@ export default function App() {
                         }`}
                         style={{ animationDelay: `${(groupIndex * 100) + (index * 50)}ms` }}
                       >
+                        {/* First row: Product info */}
                         <div className="flex items-center gap-3">
                           <input
                             type="checkbox"
@@ -1035,7 +1036,7 @@ export default function App() {
                           </div>
                           
                           <div className="flex-1 min-w-0">
-                            <h3 className={`font-medium text-market-800 truncate ${
+                            <h3 className={`font-medium text-market-800 ${
                               product.inCart ? 'line-through text-market-500' : ''
                             }`}>
                               {product.name}
@@ -1048,7 +1049,10 @@ export default function App() {
                               )}
                             </p>
                           </div>
+                        </div>
 
+                        {/* Second row: Quantity controls, price and actions */}
+                        <div className="flex items-center justify-between mt-3">
                           <div className="flex items-center gap-1">
                             <button
                               onClick={() => updateQuantity(product.id, -1)}
@@ -1078,20 +1082,22 @@ export default function App() {
                             )}
                           </div>
 
-                          <div className="flex items-center gap-0.5 flex-shrink-0">
+                          <div className="flex items-center gap-1">
                             <button
                               onClick={() => startEditing(product)}
-                              className="w-7 h-7 rounded-lg text-market-500 flex items-center justify-center hover:bg-market-100 hover:text-market-700 transition-all"
+                              className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-market-500 hover:bg-market-100 hover:text-market-700 transition-all text-xs font-medium"
                               title="Editar produto"
                             >
                               <Pencil className="w-3.5 h-3.5" />
+                              Editar
                             </button>
 
                             <button
                               onClick={() => removeProduct(product.id)}
-                              className="w-7 h-7 rounded-lg text-red-400 flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition-all"
+                              className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-red-400 hover:bg-red-50 hover:text-red-500 transition-all text-xs font-medium"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
+                              Remover
                             </button>
                           </div>
                         </div>
